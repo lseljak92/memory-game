@@ -130,7 +130,7 @@ function startClock(){
 //Format time display
 function displayTime(){
     const clock = document.querySelector('.timer');
-    const minutes = time/60;
+    const minutes = Math.floor(time/60);
     const seconds = time%60;
 
     if(seconds < 10){
