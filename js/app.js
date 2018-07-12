@@ -140,6 +140,20 @@ function displayTime(){
     }
 }
 
+function stopClock(){
+    clearInterval(timer);
+}
+
+//Shuffle cards function
+function shuffleDeck(){
+    const cardsUnshuffled = Array.from(document.querySelectorAll('.deck li'));
+    const cardsShuffled = shuffle(cardsUnshuffled);
+    for(card of cardsShuffled){
+        deck.appendChild(card);
+    }
+}
+
+shuffleDeck();
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
