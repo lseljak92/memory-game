@@ -48,6 +48,7 @@ deck.addEventListener('click', event => {
     }
 });
 
+//Function to avoid multiple cards from being open
 function validClick(clickTarget){
     return(
         clickTarget.classList.contains('card')&&
@@ -57,17 +58,36 @@ function validClick(clickTarget){
     );
 }
 
+//Function that flips cards around to show pictures
 function toggleCard(card){
-
+    card.classList.toggle('open');
+    card.classList.toggle('show');
 }
 
+//Store toggled cards into array
 function addToggleCard(clickTarget){
-
+    toggledCards.push(clickTarget);
 }
 
+//Compare card elements to establish if it is a match
 function checkPair(){
-
+    if(
+        toggledCards[0].firstElementChild.className ===
+        toggledCards[1].firstElementChild.className)
+        {
+        toggledCards[0].classList.toggle('match');
+        toggledCards[1].classList.toggle('match'); 
+        toggledCards = [];
+        cardsMatched++;   
+        }else{
+            setTimeout(() => {
+                toggleCard(toggledCards[0]);
+                toggleCard(toggledCards[1]);
+                toggledCards = [];
+            },  1000);
+        }
 }
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
