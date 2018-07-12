@@ -20,4 +20,6 @@ To get started, clone project to create copy on your local machine, open `index.
 
 * The code for displaying the timer and also the functions overall organization was inspired by Matthew Cranford in his post https://matthewcranford.com/memory-game-walkthrough-part-2-toggling-cards/.
 
+* I broadened my CSS knowledge in animation and styling on through https://www.w3schools.com/css/.
+
 * Udacity taught me all of the content developed in this project which let me successfully complete it. My course mentor and fellow students from this program also provided me with suggestions, resources, information and encouragement throughout this project.
