@@ -181,6 +181,40 @@ restartIcon.addEventListener('click', event => {
     replayGame();
 })
 
+
+function replayGame(){
+    resetTime();
+    resetMoves();
+    resetScore();
+    resetDeck();
+}
+
+function resetTime(){
+    stopClock();
+    timerOff = true;
+    time = 0;
+    displayTime();
+}
+
+function resetMoves(){
+    moves = 0;
+    document.querySelector('.moves').innerHTML = moves;
+}
+
+function resetScore(){
+    stars = 0;
+    const starList = document.querySelectorAll('.stars li');
+    for(star of starList){
+        star.style.display = 'inline';
+    }
+}
+
+function resetDeck(){
+    const cards = document.querySelectorAll('.deck li');
+    for(let card of cards){
+        card.className = 'card';
+    }
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
