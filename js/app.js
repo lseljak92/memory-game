@@ -78,7 +78,8 @@ function checkPair(){
         toggledCards[0].classList.toggle('match');
         toggledCards[1].classList.toggle('match'); 
         toggledCards = [];
-        cardsMatched++;   
+        cardsMatched++;  
+        winGame(); 
         }else{
             setTimeout(() => {
                 toggleCard(toggledCards[0]);
@@ -86,6 +87,24 @@ function checkPair(){
                 toggledCards = [];
             },  1000);
         }
+}
+
+function incrementMove(){
+    moves++;
+    const movesText = document.querySelector('.moves');
+    movesText.innerHTML = moves;
+}
+
+function checkScore(){
+
+}
+
+function removeStar(){
+    
+}
+
+function winGame(){
+
 }
 
 /*
