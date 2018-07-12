@@ -13,6 +13,7 @@ let time = 0;
 let timer;
 let cardsMatched = 0;
 const CARDS_PAIR = 2;
+const TOTAL_MATCHES = 8;
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -114,7 +115,29 @@ function removeStar(){
 }
 
 function winGame(){
+    if(cardsMatched === TOTAL_MATCHES){
+        stopClock();
+    }
+}
 
+function startClock(){
+    timer = setInterval(() => {
+        time++;
+        displayTime();
+    },  1000);
+}
+
+//Format time display
+function displayTime(){
+    const clock = document.querySelector('.timer');
+    const minutes = time/60;
+    const seconds = time%60;
+
+    if(seconds < 10){
+        clock.innerHTML = `${minutes}:0${seconds}`;
+    }else{
+        clock.innerHTML = `${minutes}:${seconds}`;
+    }
 }
 
 /*
