@@ -95,12 +95,22 @@ function incrementMove(){
     movesText.innerHTML = moves;
 }
 
+//Based on user's moves define score
 function checkScore(){
-
+    if(moves === 15 || moves === 25){
+        removeStar();
+    }
 }
 
 function removeStar(){
-    
+    const starList = document.querySelectorAll('.stars li');
+    //Loop through star elements to show user's score
+    for(star of starList){
+        if(star.style.display !== 'none'){
+            star.style.display = 'none';
+            break;
+        }
+    }
 }
 
 function winGame(){
