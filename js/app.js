@@ -1,14 +1,18 @@
 /*
- * Create a list that holds all of your cards
+ * List that holds all of the cards
  */
+const deck = document.querySelector('.deck');
 
 
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
+//List of global variables
+let toggledCards = [];
+let moves = 0;
+let stars = 3;
+let timerOff = true;
+let time = 0;
+let timer;
+let cardsMatched = 0;
+const CARDS_PAIR = 2;
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -25,6 +29,24 @@ function shuffle(array) {
     return array;
 }
 
+//Event listener for a card
+deck.addEventListener('click', event => {
+    const clickTarget = event.target;
+    if(validClick(clickTarget)
+    ){
+        if(timerOff){
+            startTimer();
+            timerOff = false;
+        }
+    }
+    toggleCard(clickTarget);
+    addToggleCard(clickTarget);
+    if(toggledCards.length === CARDS_PAIR){
+        checkPair(clickTarget);
+        incrementMove();
+        checkScore();
+    }
+});
 
 /*
  * set up the event listener for a card. If a card is clicked:
