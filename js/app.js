@@ -48,6 +48,26 @@ deck.addEventListener('click', event => {
     }
 });
 
+function validClick(clickTarget){
+    return(
+        clickTarget.classList.contains('card')&&
+        !clickTarget.classList.contains('match')&&
+        toggledCards.length < 2 &&
+        !toggledCards.includes(clickTarget)
+    );
+}
+
+function toggleCard(card){
+
+}
+
+function addToggleCard(clickTarget){
+
+}
+
+function checkPair(){
+
+}
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
