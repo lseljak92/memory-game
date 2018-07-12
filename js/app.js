@@ -14,6 +14,9 @@ let timer;
 let cardsMatched = 0;
 const CARDS_PAIR = 2;
 const TOTAL_MATCHES = 8;
+const exitButton = document.querySelector('.modal-exit');
+const replayButton = document.querySelector('.modal-replay');
+const restartIcon = document.querySelector('.restart');
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -117,6 +120,7 @@ function removeStar(){
 function winGame(){
     if(cardsMatched === TOTAL_MATCHES){
         stopClock();
+        toggleModal();
     }
 }
 
@@ -159,6 +163,24 @@ function toggleModal(){
     const modal = document.querySelector('.modal-background');
     modal.classList.toggle('hide');
 }
+
+exitButton.addEventListener('click', event => {
+    const clickButton = event.target;
+    toggleModal();
+})
+
+replayButton.addEventListener('click', event => {
+    const clickButton = event.target;
+    toggleModal();
+    replayGame();
+    shuffleDeck();
+})
+
+restartIcon.addEventListener('click', event => {
+    const clickButton = event.target;
+    replayGame();
+})
+
 /*
  * set up the event listener for a card. If a card is clicked:
  *  - display the card's symbol (put this functionality in another function that you call from this one)
