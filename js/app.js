@@ -190,6 +190,7 @@ function replayGame(){
     resetMoves();
     resetScore();
     resetDeck();
+    shuffleDeck();
 }
 
 function resetTime(){
@@ -217,4 +218,8 @@ function resetDeck(){
     for(let card of cards){
         card.className = 'card';
     }
+}
+
+function displayGameStats(){
+
 }
