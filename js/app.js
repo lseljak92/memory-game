@@ -96,7 +96,7 @@ function checkPair(){
 }
 
 function incrementMove(){
-    moves++;
+    ++moves;
     const movesText = document.querySelector('.moves');
     movesText.innerHTML = moves;
 }
@@ -123,6 +123,7 @@ function winGame(){
     if(cardsMatched === TOTAL_MATCHES){
         stopClock();
         toggleModal();
+        displayGameStats();
     }
 }
 
@@ -221,5 +222,26 @@ function resetDeck(){
 }
 
 function displayGameStats(){
+    const clock = document.querySelector('.timer');
+    const minutes = Math.floor(time/60);
+    const seconds = time%60;
+    const stars = getStars();
+    const totalMoves = moves+1;
+    
+    document.querySelector('.modal-time').innerHTML = `Time: ${minutes}:${seconds}`;
+    document.querySelector('.modal-moves').innerHTML = `Moves: ${totalMoves}`;
+    document.querySelector('.modal-score').innerHTML = `Score: ${stars}/3 stars`;
+}
 
+function getStars(){
+    stars = document.querySelectorAll('.stars li');
+    let starCount = 0;
+    for(star of stars){
+        if(star.style.display !== 'none'){
+            starCount++;
+        }
+    }
+    console.log(starCount);
+    return starCount;
+    
 }
