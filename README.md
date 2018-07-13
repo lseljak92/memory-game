@@ -1,16 +1,38 @@
 # Memory Game Project
 
-## Udacity FEND
-
 Project 2 for Udacity's Front-End Development project - Grow With Google Scholarhip 2018
 
+## Getting Started
 
-## Author
-Maria Luciana Seljak
+Clone or download the project to create copy on your local machine. If you need help on cloning the repository using the command line follow this link: https://services.github.com/on-demand/github-cli/clone-repo-cli. Once you are all set, open `index.html` and start playing!
 
-## Instructions
+## How to Play
 
-To get started, clone project to create copy on your local machine, open `index.html` and start playing!
+This Memory Game, also know as Concentration, consists on a deck of cards that are laid face down to hide their pictures.
+
+The deck of cards will be shuffled every time a new game starts.
+
+### Step by Step
+
+* To start the game click on any card in order to flip it over.
+* Choose a second card in order to find the first card's match.
+* If the two cards match, they will stay facing up. Otherwise they will turn back over.
+* Remember what was on each card and where it was.
+
+### Winning the Game
+
+The object of the game is to turn over all the pairs of matching cards.
+
+### Stats
+
+This Memory Game is time based. The faster you find the cards pairs, the better score you will get.
+
+## Dependencies
+
+* Font used "Coda" from [Google Fonts](https://fonts.googleapis.com/css?family=Coda).
+* Card icons from [Font Awesome 4.6.1](https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css).
+* Background image from [Subtle Patterns](https://www.toptal.com/designers/subtlepatterns/geometry-2/).
+
 
 ## Acknowledgements
 
