@@ -141,7 +141,7 @@ h1 {
     top: 50%;
     left: 50%;
     padding: 0;
-    transform: translate(-50%, -90%);
+    transform: translate(-50%, -120%);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
  }
 
