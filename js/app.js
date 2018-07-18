@@ -203,6 +203,7 @@ function resetTime(){
 
 function resetMoves(){
     moves = 0;
+    cardsMatched = 0;
     document.querySelector('.moves').innerHTML = moves;
 }
 
