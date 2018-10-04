@@ -6,6 +6,8 @@ Project 2 for Udacity's Front-End Development project - Grow With Google Scholar
 
 Clone or download the project to create copy on your local machine. If you need help on cloning the repository using the command line follow this link: https://services.github.com/on-demand/github-cli/clone-repo-cli. Once you are all set, open `index.html` and start playing!
 
+Or you can also click [here](https://lseljak92.github.io/memory-game/) to play the game!
+
 ## How to Play
 
 This Memory Game, also know as Concentration, consists on a deck of cards that are laid face down to hide their pictures.
