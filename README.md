@@ -1,4 +1,4 @@
-# Memory Game Project
+# Memory Game
 
 Project 2 for Udacity's Front-End Development project - Grow With Google Scholarhip 2018
 
